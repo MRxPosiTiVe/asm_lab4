@@ -1,9 +1,9 @@
-.ORIG x3000
+.ORIG x3000         ; Начальный адрес программы
 
-        LEA R0, HELLO_STR    ; Загрузка эффективного адреса строки в R0
-        PUTS                 ; Вывод строки
-        HALT                 ; Остановка программы
+    LEA R0, HELLO    ; Загрузить адрес строки в регистр R0
+    PUTS             ; Вывести строку
+    HALT             ; Остановить выполнение программы
 
-        HELLO_STR .STRINGZ "Hello, World!" ; Строка "Hello, World!" с нулевым завершением
+HELLO   .STRINGZ "Hello, World!"  ; Строка Hello, World!
 
-        .END
+.END
